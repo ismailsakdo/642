@@ -1,0 +1,5 @@
+###Question
+
+1	What is the main problem of the database here?
+2	How to report/ make call to the truck driver?
+3	What is the best way to settle this issues/ crisis? - Google Sheet: XLOOKUP
