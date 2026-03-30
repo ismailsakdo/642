@@ -1,0 +1,5 @@
+Product_ID (PK)	Product_Name	Product_Category	Base_Price_RM	Product_Image_URL
+PROD-101	Oak Dining Chair	FURNITURE	250	https://www.roselandfurniture.com/cdn/shop/files/RF8498-Carnon-Dining-Chair---Angle1.jpg?v=1717151860&width=1200
+PROD-102	Nexus Smart Desk	SMART_DEVICE	1500	https://www.sjoffice.co.za/wp-content/uploads/2022/11/01NEXUS383BOWHTWHT10001-scaled-1.jpg
+PROD-103	PVF Office Admin Pro	SOFTWARE	5000	https://miro.medium.com/v2/resize:fit:720/format:webp/1*klQQX3uaQmqEbMdd2XgrPg.png
+PROD-104	Executive Leather Sofa	FURNITURE	3200	https://www.officefurnituresmalaysia.com/wp-content/uploads/2025/12/Elodie-Executive-Sofa-Settee-with-Right-Armrest-Bandar-Utama-Selayang-Tropicana.jpg
