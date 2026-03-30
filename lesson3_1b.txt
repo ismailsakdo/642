@@ -1,0 +1,3 @@
+Table_ID (PK)	Product_ID (FK)	Table_Surface_Material	Seating_Capacity
+TBL-01	P-100	Glass	6 Persons
+TBL-02	P-102	Solid Oak	8 Persons
