@@ -1,0 +1,4 @@
+Product_ID (PK)	Product_Type	Base_Price	Marketing_Category	Image
+P-100	TABLE	RM 800	Dining Collection	https://cdn1.npcdn.net/image/1622705347ba7d85d873e7943e7f7c4f3a403e0d42.jpg?md5id=44ae4524880502f96721515663652d04&new_width=1200&new_height=1200&size=max&w=1624935036
+P-101	CHAIR	RM 150	Office Collection	https://www.igreen.my/images/default-source/products/desk-collection/executive-table/ace/e7-premium-standing-desk_white-frame/e7-premium-standing-desk-white-frame.tmb-products-m.jpg?sfvrsn=1
+P-102	TABLE	RM 1200	Executive Office	https://cdn-bnokp.nitrocdn.com/QNoeDwCprhACHQcnEmHgXDhDpbEOlRHH/assets/images/optimized/rev-af6a3dd/www.decorilla.com/online-decorating/wp-content/uploads/2024/05/Contemporary-executive-office-design-by-Decorilla-1024x574.jpeg
