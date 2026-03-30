@@ -1,0 +1,2 @@
+Chair_ID (PK)	Product_ID (FK)	Chair_Weight_Capacity	Has_Armrests
+CHR-01	P-101	120 KG	YES
