@@ -1,0 +1,41 @@
+Step 1: Enforcing Entity Integrity (The Primary Keys)
+Chapter 4 Definition: No primary key attribute may be null. Every row must have a unique identifier.
+
+Go to Data > Columns in AppSheet.
+
+Open TBL_CUSTOMER. Ensure the Key checkbox is ticked only for Customer_ID.
+
+Open TBL_PRODUCT. Ensure the Key checkbox is ticked only for Product_ID.
+
+Open TBL_ORDER_DETAILS. Ensure the Key checkbox is ticked only for Detail_ID.
+Result: AppSheet will now mathematically block any user from creating a record without a unique ID.
+
+Step 2: Enforcing Referential Integrity (The Foreign Keys)
+Chapter 4 Definition: A foreign key must match a valid primary key. We do this to prevent "orphaned" data.
+
+Open TBL_ORDER. Find the Customer_ID column.
+
+Change the Column Type to Ref (Reference).
+
+A menu will pop up asking for the "Source Table". Select TBL_CUSTOMER.
+
+Open TBL_ORDER_DETAILS. Change Order_ID to Ref pointing to TBL_ORDER.
+
+Change Product_ID to Ref pointing to TBL_PRODUCT.
+Result: AppSheet will instantly change these text boxes into Dropdown Menus. A sales rep can no longer type a fake customer name; they are forced to select an existing, valid customer from the master table.
+
+Step 3: Creating the Associative Bridge (IsPartOf)
+Chapter 4 Definition: A weak entity or associative entity cannot exist without its parent.
+
+Stay in TBL_ORDER_DETAILS. Look at the Order_ID column you just made a Ref.
+
+Check the box labeled IsPartOf.
+Result: This is AppSheet magic. By declaring that the Order Details are part of the main Order, AppSheet automatically builds an "Inline View." It generates a shopping cart directly inside the Order screen.
+
+Step 4: Designing the Human UX (Labels)
+Chapter 4 states databases use IDs (C-55), but humans need context.
+
+Go to TBL_CUSTOMER. Uncheck the Label box for Customer_ID and check it for Customer_Name.
+
+Go to TBL_PRODUCT. Check the Label box for Product_Name.
+Result: When the sales rep opens the app, the dropdown menu will say "TechCorp" instead of "C-55", even though the database secretly saves the secure "C-55" ID code.
