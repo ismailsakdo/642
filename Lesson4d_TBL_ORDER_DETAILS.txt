@@ -1,0 +1,4 @@
+Detail_ID (PK)	Order_ID (FK)	Product_ID (FK)	Qty
+DT-001	ORD-901	P-10	10
+DT-002	ORD-901	P-11	5
+DT-003	ORD-902	P-10	20
