@@ -1,0 +1,3 @@
+Customer_ID (PK)	Customer_Name	Industry_Type
+C-55	TechCorp	Technology
+C-66	EduGroup	Education
