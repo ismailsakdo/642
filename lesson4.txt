@@ -1,0 +1,4 @@
+Order_ID	Date	Customer_ID	Customer_Name	Product_ID	Product_Name	Unit_Price	Qty
+ORD-901	10-Oct	C-55	TechCorp	P-10	Ergonomic Chair	RM 500	10
+ORD-901	10-Oct	C-55	TechCorp	P-11	Standing Desk	RM 1200	5
+ORD-902	11-Oct	C-66	EduGroup	P-10	Ergonomic Chair	RM 500	20
