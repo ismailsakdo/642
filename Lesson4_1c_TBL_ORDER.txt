@@ -1,0 +1,3 @@
+Order_ID (PK)	Order_Date	Customer_ID (FK)
+ORD-901	10-Oct	C-55
+ORD-902	11-Oct	C-66
