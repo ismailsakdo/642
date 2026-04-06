@@ -1,0 +1,3 @@
+Product_ID (PK)	Product_Name	Unit_Price
+P-10	Ergonomic Chair	RM 500
+P-11	Standing Desk	RM 1200
