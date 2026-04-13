@@ -1,7 +1,5 @@
 # The Real-World Application: SQL as a Management Skill
 
-To teach your MBA students how to apply this in the "real world," you must shift their perspective completely.
-
 > "SQL is not an IT skill. SQL is a Management Skill."
 
 When they graduate, they likely won't be typing SQL into AwardSpace every day. However, they will be buying, managing, or auditing enterprise software (like SAP, Salesforce, or custom AppSheet apps). If they do not understand the SQL engine running underneath, software vendors will overcharge them, and their IT departments will blind them with technical jargon.
