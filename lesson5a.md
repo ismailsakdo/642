@@ -1,15 +1,16 @@
-THE MASTERCLASS EXTENSION: BUSINESS INTELLIGENCE IN SQL
-LEVEL 1: Aggregate Functions – "The CFO's Calculator"
-The MBA Lesson: In Excel, you highlight a column and look at the bottom right corner to see the "Sum." But what if you have 5 million rows? Excel will freeze and crash. SQL handles millions of rows in milliseconds using Aggregate Functions.
+# THE MASTERCLASS EXTENSION: BUSINESS INTELLIGENCE IN SQL
 
-The AwardSpace Activity: The Financial Audit
-The Scenario: "The CFO needs to know the total value of all the furniture we have in the system right now. Are we holding too much expensive inventory?"
+## LEVEL 1: Aggregate Functions – "The CFO's Calculator"
+**The MBA Lesson:** In Excel, you highlight a column and look at the bottom right corner to see the "Sum." But what if you have 5 million rows? Excel will freeze and crash. SQL handles millions of rows in milliseconds using Aggregate Functions.
 
-The Command:
-Go to the SQL Tab in AwardSpace and run this:
+### The AwardSpace Activity: The Financial Audit
+**The Scenario:** "The CFO needs to know the total value of all the furniture we have in the system right now. Are we holding too much expensive inventory?"
 
-SQL
-SELECT SUM(ProductPrice) AS Total_Inventory_Value
+**The Command:**
+Go to the **SQL Tab** in AwardSpace and run this:
+
+```sql
+SELECT SUM(ProductPrice) AS Total_Inventory_Value 
 FROM TBL_PRODUCT;
 TEACH SLOWLY — Breakdown:
 
@@ -34,8 +35,8 @@ The Scenario: "The Marketing Director asks: 'How many items do we sell in each t
 The Command:
 
 SQL
-SELECT ProductFinish, COUNT(ProductID) AS Number_Of_Items
-FROM TBL_PRODUCT
+SELECT ProductFinish, COUNT(ProductID) AS Number_Of_Items 
+FROM TBL_PRODUCT 
 GROUP BY ProductFinish;
 TEACH SLOWLY — Breakdown:
 
@@ -52,8 +53,8 @@ The Scenario: "We need a report that shows exactly what was ordered. We need the
 The Command:
 
 SQL
-SELECT TBL_ORDERLINE.OrderID, TBL_PRODUCT.ProductDescription, TBL_ORDERLINE.OrderedQuantity
-FROM TBL_ORDERLINE
+SELECT TBL_ORDERLINE.OrderID, TBL_PRODUCT.ProductDescription, TBL_ORDERLINE.OrderedQuantity 
+FROM TBL_ORDERLINE 
 INNER JOIN TBL_PRODUCT ON TBL_ORDERLINE.ProductID = TBL_PRODUCT.ProductID;
 TEACH SLOWLY — Breakdown:
 
@@ -72,9 +73,9 @@ The AwardSpace Activity: Creating the Daily Dashboard
 The Command:
 
 SQL
-CREATE VIEW CEO_Daily_Report AS
-SELECT TBL_ORDERLINE.OrderID, TBL_PRODUCT.ProductDescription, TBL_ORDERLINE.OrderedQuantity
-FROM TBL_ORDERLINE
+CREATE VIEW CEO_Daily_Report AS 
+SELECT TBL_ORDERLINE.OrderID, TBL_PRODUCT.ProductDescription, TBL_ORDERLINE.OrderedQuantity 
+FROM TBL_ORDERLINE 
 INNER JOIN TBL_PRODUCT ON TBL_ORDERLINE.ProductID = TBL_PRODUCT.ProductID;
 TEACH SLOWLY — Breakdown:
 
