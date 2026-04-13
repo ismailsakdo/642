@@ -1,0 +1,125 @@
+PHASE 1: Preparing the Battlefield (AwardSpace)
+Before we type any code, students must know where to type it.
+
+Have them log into AwardSpace.
+
+Open Database Manager -> Click phpMyAdmin.
+
+On the left side, click their database name (e.g., 12345_pvf).
+
+Tell them to click the "SQL" tab at the top.
+
+"This white box is your Command Center. Whenever you write SQL here and click 'Go', the server obeys."
+
+PHASE 2: DDL (Data Definition Language) - Building the Walls
+The MBA Lesson: Before we can store data, we must build the physical structure. In Excel, you just open a file and start typing. That is why Excel is weak. In SQL, we must create a Strict Digital Contract using DDL.
+
+Step 1: Creating the Product Table
+We need a place to store our furniture inventory. Have them copy and paste this into the SQL tab:
+
+SQL
+CREATE TABLE TBL_PRODUCT (
+    ProductID VARCHAR(10) NOT NULL,
+    ProductDescription VARCHAR(100) NOT NULL,
+    ProductFinish VARCHAR(50),
+    ProductPrice DECIMAL(10,2),
+    PRIMARY KEY (ProductID)
+);
+TEACH SLOWLY - Break down the code line-by-line:
+
+CREATE TABLE TBL_PRODUCT: We are commanding the server to build a new container.
+
+VARCHAR(10): This means "Variable Character" (Text). The (10) means it cannot be longer than 10 letters. We are saving server memory.
+
+NOT NULL: Crucial Business Rule. This forces the system to reject any product that doesn't have an ID or Description. No blank data is allowed.
+
+DECIMAL(10,2): This is Domain Integrity. It means numbers only, up to 10 digits, with exactly 2 decimal places for cents (e.g., 150.50). You cannot accidentally type "One Hundred" here.
+
+PRIMARY KEY (ProductID): Entity Integrity. This tells the database that ProductID is the absolute unique fingerprint of the row.
+
+(Have them click Go to create the table).
+
+PHASE 3: DML (Data Manipulation Language) - Moving the Boxes
+The MBA Lesson: The warehouse is built, but it is empty. DML is how we run the daily business—inserting new data, updating old data, and deleting bad data.
+
+Step 2: Stocking the Warehouse (INSERT)
+We need to add our first piece of furniture. Go back to the SQL Tab and paste this:
+
+SQL
+INSERT INTO TBL_PRODUCT (ProductID, ProductDescription, ProductFinish, ProductPrice) 
+VALUES ('P-101', 'Executive Leather Chair', 'Black Leather', 850.00);
+TEACH SLOWLY:
+
+INSERT INTO: The command to add a row.
+
+The first bracket (): Lists the columns exactly as we built them.
+
+VALUES: Tells the database, "Here is the data."
+
+The second bracket (): The actual data. Notice that text is in 'Single Quotes', but numbers (850.00) are not.
+
+(Have them click Go. Then, show them how to insert multiple items at once to save time):
+
+SQL
+INSERT INTO TBL_PRODUCT (ProductID, ProductDescription, ProductFinish, ProductPrice) 
+VALUES 
+('P-102', 'Meeting Table', 'Oak', 2500.00),
+('P-103', 'Filing Cabinet', 'Steel', 350.00),
+('P-104', 'Guest Chair', 'Oak', 200.00);
+Step 3: The Spreadsheet Killer (UPDATE)
+The Scenario: The price of 'Oak' wood just doubled. The CEO needs all Oak products to be priced at RM 3000.
+
+In Excel: You scroll through 10,000 rows, find every Oak item, use a calculator, and retype the price. You make mistakes.
+
+In SQL: We do it in one command.
+
+SQL
+UPDATE TBL_PRODUCT 
+SET ProductPrice = 3000.00 
+WHERE ProductFinish = 'Oak';
+TEACH SLOWLY:
+
+UPDATE: What table are we changing?
+
+SET: What is the new value?
+
+WHERE: The Safety Net. If you forget the WHERE clause, you will change the price of every item in the entire company to RM 3000. The WHERE clause targets only the 'Oak' items.
+
+Step 4: Removing Assets (DELETE)
+The Scenario: We are no longer selling the 'Steel Filing Cabinet' (P-103).
+
+SQL
+DELETE FROM TBL_PRODUCT 
+WHERE ProductID = 'P-103';
+(Have them run this. The item is permanently removed).
+
+PHASE 4: DQL (Data Query Language) - The CEO's Interrogation
+The MBA Lesson: The CEO does not want to see the whole database. The CEO wants specific Business Intelligence. DQL (using SELECT) is how we ask the vault questions.
+
+Before they type the code, let's use a visual simulator to show them how a SELECT query works in real-time.
+
+
+Show me the visualization
+
+
+Step 5: Writing the Queries in AwardSpace
+Now that they see the logic visually, have them ask the AwardSpace server a real question.
+
+The Scenario: The CEO says, "Show me a list of all products that cost more than RM 500. I only want to see the Description and the Price. Put the most expensive item at the top."
+
+Have them paste this into the SQL Tab:
+
+SQL
+SELECT ProductDescription, ProductPrice 
+FROM TBL_PRODUCT 
+WHERE ProductPrice > 500 
+ORDER BY ProductPrice DESC;
+TEACH SLOWLY:
+
+SELECT: What columns do you want to show the CEO?
+
+FROM: Where is the data?
+
+WHERE: What is the business filter? (Greater than 500).
+
+ORDER BY ... DESC: Sort it Descending (Highest to Lowest).
