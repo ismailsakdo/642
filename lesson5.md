@@ -1,6 +1,3 @@
-Here is the complete **Chapter 5 Masterclass** formatted as a single `.md` file, ready for GitHub or your lecture notes.
-
-```markdown
 # Chapter 5 Masterclass: The Language of the Vault (SQL)
 
 ## The Introduction: The Mindset Shift
