@@ -48,6 +48,15 @@ GROUP BY ProductFinish;
 ## LEVEL 3: The JOIN Command – "The Master Architect"
 **The MBA Lesson:** Remember Week 4? We purposely broke our data apart to keep it safe (Normalization). We separated `TBL_PRODUCT` from `TBL_ORDERLINE`. But the CEO cannot read a report full of ID numbers like `P-101`. The CEO wants to see English words. `JOIN` is how we stitch the database back together for human eyes.
 
+CREATE TABLE TBL_ORDERLINE (
+    OrderID VARCHAR(10),
+    ProductID VARCHAR(10),
+    OrderedQuantity INT,
+    PRIMARY KEY (OrderID, ProductID)
+);
+
+INSERT INTO TBL_ORDERLINE VALUES ('ORD-101', 'P-101', 5), ('ORD-102', 'P-102', 2);
+
 ### The AwardSpace Activity: The Unified Sales Report
 **The Scenario:** "We need a report that shows exactly what was ordered. We need the Order ID (from the Order table) AND the Product Name (from the Product table) sitting side-by-side."
 
