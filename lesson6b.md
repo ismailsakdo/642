@@ -1,6 +1,6 @@
 ***
 
-# 🌐 WEEK 7 MASTERCLASS: Real-Time Pipelines & Time Series Analytics
+# 🌐 WEEK 6 MASTERCLASS: Real-Time Pipelines & Time Series Analytics
 **Course:** AGE 642/3 - Modern Database Management (Universiti Sains Malaysia)  
 **Environment:** AwardSpace (`phpMyAdmin` & `File Manager`), OpenWeather API  
 **Duration:** 3 Hours  
