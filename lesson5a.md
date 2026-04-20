@@ -55,9 +55,8 @@ CREATE TABLE TBL_ORDERLINE (
     OrderedQuantity INT,
     PRIMARY KEY (OrderID, ProductID)
 );
-```
-
 INSERT INTO TBL_ORDERLINE VALUES ('ORD-101', 'P-101', 5), ('ORD-102', 'P-102', 2);
+```
 
 ### The AwardSpace Activity: The Unified Sales Report
 **The Scenario:** "We need a report that shows exactly what was ordered. We need the Order ID (from the Order table) AND the Product Name (from the Product table) sitting side-by-side."
